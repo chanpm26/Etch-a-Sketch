@@ -1,7 +1,5 @@
 #container {
     display: inline-grid;
-    row-gap: 5px;
-    column-gap: 5px;
     padding-bottom: 20px;
 }
 

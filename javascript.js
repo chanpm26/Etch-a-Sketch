@@ -1,62 +1,29 @@
 const container = document.querySelector('#container')
-const div1 = document.createElement('div')
-div1.setAttribute('id', 'div1')
-const div2 = document.createElement('div')
-div2.setAttribute('id', 'div2')
-const div3 = document.createElement('div')
-div3.setAttribute('id', 'div3')
-const div4 = document.createElement('div')
-div4.setAttribute('id', 'div4')
-const div5 = document.createElement('div')
-div5.setAttribute('id', 'div5')
-const div6 = document.createElement('div')
-div6.setAttribute('id', 'div6')
-const div7 = document.createElement('div')
-div7.setAttribute('id', 'div7')
-const div8 = document.createElement('div')
-div8.setAttribute('id', 'div8')
-const div9 = document.createElement('div')
-div9.setAttribute('id', 'div9')
-const div10 = document.createElement('div')
-div10.setAttribute('id', 'div10')
-const div11 = document.createElement('div')
-div11.setAttribute('id', 'div11')
-const div12 = document.createElement('div')
-div12.setAttribute('id', 'div12')
-const div13 = document.createElement('div')
-div13.setAttribute('id', 'div13')
-const div14 = document.createElement('div')
-div14.setAttribute('id', 'div14')
-const div15 = document.createElement('div')
-div15.setAttribute('id', 'div15')
-const div16 = document.createElement('div')
-div16.setAttribute('id', 'div16')
 
+function createDiv(number) {
+    for (let i = 0; i < (number*number); i++) {
+        let div = document.createElement('div');
+        container.appendChild(div);
+        container.style.gridTemplateColumns = `repeat(${number}, 1fr)`;
+        container.style.gridTemplateRows = `repeat(${number}, 1fr)`;
+    }
+}
 
+createDiv(16)
 
-container.appendChild(div1)
-container.appendChild(div2)
-container.appendChild(div3)
-container.appendChild(div4)
-container.appendChild(div5)
-container.appendChild(div6)
-container.appendChild(div7)
-container.appendChild(div8)
-container.appendChild(div9)
-container.appendChild(div10)
-container.appendChild(div11)
-container.appendChild(div12)
-container.appendChild(div13)
-container.appendChild(div14)
-container.appendChild(div15)
-container.appendChild(div16)
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 const button = document.querySelector('#button')
 button.addEventListener('click', () => {
     let promptAnswer = prompt("Let's make a new grid! How many squares per side do you want?", "Enter a number less than 100")
     if (promptAnswer > 100) {
-        alert("That number is too big, please enter a new one less than 100")
-    }
-
-}
-)
+        alert("That number is too big, please enter a new one less than 100") 
+        } else {
+            removeAllChildNodes(container);
+            createDiv(promptAnswer)
+        }
+} )

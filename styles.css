@@ -26,6 +26,10 @@
     background-color: yellow;
 }
 
+div.hover {
+    background-color: yellow !important;
+}
+
 button {
     height: auto;
     font-size: 20px;
@@ -38,7 +42,11 @@ button {
 #buttonContainer {
     display: flex;
     justify-content: center;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     background-image: url("fire.jpeg");
     background-size: auto;
+}
+
+#reset {
+    margin-left: 15px;
 }

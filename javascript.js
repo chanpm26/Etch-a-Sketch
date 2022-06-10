@@ -4,8 +4,8 @@ let gridSquares = function createDiv(number) {
     for (let i = 0; i < (number*number); i++) {
         let div = document.createElement('div');
         container.appendChild(div);
-        container.style.gridTemplateColumns = `repeat(${number}, minmax(7px, 700px))`;
-        container.style.gridTemplateRows = `repeat(${number}, minmax(7px, 700px))`;
+        container.style.gridTemplateColumns = `repeat(${number}, minmax(5px, 500px))`;
+        container.style.gridTemplateRows = `repeat(${number}, minmax(5px, 500px))`;
 }
 let squares = document.querySelectorAll("#container > div")
 for (const square of squares) {
@@ -28,7 +28,7 @@ button.addEventListener('click', () => {
     let promptAnswer = prompt("Let's make a new grid! How many squares per side do you want?", "Enter a number less than 100")
     if (promptAnswer > 100) {
         alert("That number is too big, please enter a new one less than 100") 
-        } else {
+    } else {
             removeAllChildNodes(container);
             gridSquares(promptAnswer)
         }

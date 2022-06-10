@@ -1,14 +1,18 @@
+body {
+    background-image: url("fire.jpeg");
+
+}
+
 #container {
     display: grid;
     padding: 20px;
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
 }
 
 #biggercontainer {
     display: flex;
     justify-content: center;
-    background-image: url("fire.jpeg");
     background-size: auto;
 }
 
@@ -42,8 +46,6 @@ button {
 #buttonContainer {
     display: flex;
     justify-content: center;
-    padding-bottom: 15px;
-    background-image: url("fire.jpeg");
     background-size: auto;
 }
 
@@ -53,9 +55,7 @@ button {
 
 h1 {
     text-align: center;
-    padding: 15px;
-    margin: 3px;
+    margin: 0px;
     font-size: 50px;
-    background-color: black;
-    color: red; 
+    color: white; 
 }
